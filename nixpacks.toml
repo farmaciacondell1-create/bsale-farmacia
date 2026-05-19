@@ -1,5 +1,5 @@
-[phases.build]
-cmds = []
+[phases.setup]
+nixPkgs = ["python311"]
 
 [start]
 cmd = "python server.py"
