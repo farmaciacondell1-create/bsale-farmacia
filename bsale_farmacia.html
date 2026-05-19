@@ -438,11 +438,11 @@ function goTab(t){
 // API HELPERS
 // ============================================================
 async function apiGet(action){
-  const r = await fetch('/proxy?url=' + encodeURIComponent(SCRIPT_URL + '?action=' + action));
+  const r = await fetch(SCRIPT_URL + '?action=' + action);
   return r.json();
 }
 async function apiPost(body){
-  const r = await fetch('/proxy?url=' + encodeURIComponent(SCRIPT_URL), {
+  const r = await fetch(SCRIPT_URL, {
     method:'POST',
     headers:{'Content-Type':'application/json'},
     body: JSON.stringify(body)
